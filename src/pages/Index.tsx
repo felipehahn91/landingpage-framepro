@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -21,6 +23,7 @@ import {
 // Importando as imagens
 import logoImg from '../assets/logo.png';
 import heroMockupImg from '../assets/hero-mockup.png';
+import heatmapImg from '../assets/heatmap.png';
 
 // Componente auxiliar para animações de fade-in
 const FadeIn = ({ children, delay = 0, direction = 'up', className = "" }: { children: React.ReactNode, delay?: number, direction?: 'up' | 'down' | 'left' | 'right' | 'none', className?: string }) => {
@@ -33,7 +36,7 @@ const FadeIn = ({ children, delay = 0, direction = 'up', className = "" }: { chi
   };
 
   return (
-<motion.div
+    <motion.div
       initial={{ opacity: 0, ...directions[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -255,8 +258,8 @@ const Index = () => {
           <FadeIn direction="left" className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 to-transparent rounded-3xl blur-2xl transform scale-95"></div>
             <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-              alt="Propostas Interativas" 
+              src={heatmapImg} 
+              alt="Mapa de Calor Proposta" 
               className="rounded-3xl shadow-2xl border border-slate-800 relative z-10 transform transition-transform duration-500 hover:scale-[1.02]"
             />
             
