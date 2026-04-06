@@ -54,13 +54,13 @@ const Index = () => {
       {/* Header / Navigation */}
       <header className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-slate-200/50 transition-all duration-300">
         <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <img src={logoImg} alt="FramePro Logo" className="h-8 w-auto hover:opacity-80 transition-opacity cursor-pointer" />
+            <img src={logoImg} alt="FramePro Logo" className="h-10 w-auto hover:opacity-80 transition-opacity cursor-pointer" />
           </motion.div>
           
           <motion.div 
@@ -485,7 +485,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="md:col-span-1">
             <div className="flex items-center mb-8">
-              <img src={logoImg} alt="FramePro Logo" className="h-8 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity cursor-pointer" />
+              <img src={logoImg} alt="FramePro Logo" className="h-10 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity cursor-pointer" />
             </div>
             <p className="text-sm mb-8 leading-relaxed font-medium">
               O CRM definitivo para fotógrafos e filmmakers. Organize sua agenda, crie propostas irresistíveis e feche contratos digitalmente sem dor de cabeça.
