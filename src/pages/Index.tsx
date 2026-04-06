@@ -33,7 +33,12 @@ const FadeIn = ({ children, delay = 0, direction = 'up', className = "" }: { chi
   };
 
   return (
-    <motion.div
+<think>**Eliminating the Artifact**
+
+I've zeroed in on the erroneous inclusion of the `<think>` tag within the JSX of `src/pages/Index.tsx`, specifically around line 64. My next action is a direct removal of this unwanted block. I'm focusing on a clean and concise correction, ensuring no residual artifacts remain after the fix is implemented.
+
+
+</think>    <motion.div
       initial={{ opacity: 0, ...directions[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -102,7 +107,7 @@ const Index = () => {
         
         <FadeIn delay={0.2}>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-slate-900">
-            Fotógrafo que cresce não<br className="hidden md:block" /> conta com a sorte. Conta com o<br className="hidden md:block" />
+            Fotógrafo que cresce não conta com a sorte. Conta com o
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400"> FramePro.</span>
           </h1>
         </FadeIn>
