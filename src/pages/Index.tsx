@@ -49,6 +49,9 @@ const FadeIn = ({ children, delay = 0, direction = 'up', className = "" }: { chi
 };
 
 const Index = () => {
+  const signupUrl = "https://app.framepro.click/signup";
+  const loginUrl = "https://app.framepro.click";
+
   return (
     <div className="min-h-screen bg-slate-50/50 font-sans text-slate-900 selection:bg-orange-200 selection:text-orange-900 overflow-hidden">
       {/* Background Gradient Sutil */}
@@ -83,10 +86,10 @@ const Index = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-center gap-5"
           >
-            <a href="#" className="text-sm font-semibold text-slate-600 hover:text-slate-900 hidden sm:block transition-colors">Entrar</a>
-            <button className="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-900/20 transition-all active:scale-95">
+            <a href={loginUrl} className="text-sm font-semibold text-slate-600 hover:text-slate-900 hidden sm:block transition-colors">Entrar</a>
+            <a href={signupUrl} className="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-900/20 transition-all active:scale-95">
               Teste Grátis
-            </button>
+            </a>
           </motion.div>
         </nav>
       </header>
@@ -118,12 +121,12 @@ const Index = () => {
         
         <FadeIn delay={0.4}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-            <button className="w-full sm:w-auto bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all flex items-center justify-center gap-2 shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-1 active:translate-y-0">
+            <a href={signupUrl} className="w-full sm:w-auto bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all flex items-center justify-center gap-2 shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-1 active:translate-y-0">
               COMEÇAR 14 DIAS GRÁTIS <ArrowRight size={20} />
-            </button>
-            <button className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm hover:shadow-md">
+            </a>
+            <a href="#como-funciona" className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm hover:shadow-md">
               Ver recursos
-            </button>
+            </a>
           </div>
         </FadeIn>
 
@@ -380,9 +383,9 @@ const Index = () => {
                   <li className="flex items-start gap-3 text-slate-400"><XCircle size={20} className="shrink-0 mt-0.5" /> <span>Emissão de Boletos e Pix</span></li>
                 </ul>
                 
-                <button className="w-full bg-slate-100 text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-200 transition-colors mt-auto">
+                <a href={signupUrl} className="w-full bg-slate-100 text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-200 transition-colors mt-auto text-center">
                   ASSINAR STARTER
-                </button>
+                </a>
               </div>
             </FadeIn>
 
@@ -410,9 +413,9 @@ const Index = () => {
                   <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Suporte prioritário via WhatsApp</span></li>
                 </ul>
                 
-                <button className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 mt-auto">
+                <a href={signupUrl} className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 mt-auto text-center">
                   TESTAR PLUS GRÁTIS
-                </button>
+                </a>
               </div>
             </FadeIn>
 
@@ -443,9 +446,9 @@ const Index = () => {
                   <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0 mt-0.5" /> <span>Treinamento de onboarding VIP</span></li>
                 </ul>
                 
-                <button className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-100 transition-colors relative z-10 mt-auto">
+                <a href={signupUrl} className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-100 transition-colors relative z-10 mt-auto text-center">
                   ASSINAR FOUNDER
-                </button>
+                </a>
               </div>
             </FadeIn>
           </div>
@@ -475,9 +478,9 @@ const Index = () => {
               <p className="text-orange-100 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                 Leva exatamente 2 minutos para criar sua conta e transformar a gestão do seu negócio. Pare de vender no WhatsApp bagunçado hoje mesmo.
               </p>
-              <button className="bg-slate-900 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-slate-800 transition-all flex items-center justify-center gap-3 mx-auto shadow-xl hover:shadow-2xl hover:shadow-slate-900/30 hover:-translate-y-1 active:translate-y-0">
+              <a href={signupUrl} className="bg-slate-900 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-slate-800 transition-all flex items-center justify-center gap-3 mx-auto shadow-xl hover:shadow-2xl hover:shadow-slate-900/30 hover:-translate-y-1 active:translate-y-0 w-fit">
                 CRIAR MINHA CONTA AGORA <ArrowRight size={24} />
-              </button>
+              </a>
             </div>
           </div>
         </FadeIn>
@@ -503,18 +506,17 @@ const Index = () => {
           <div>
             <h4 className="text-white font-bold mb-6 tracking-wide">Produto</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Recursos</a></li>
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Propostas Interativas</a></li>
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Assinatura Digital</a></li>
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Planos e Preços</a></li>
+              <li><a href="#como-funciona" className="hover:text-orange-400 transition-colors">Recursos</a></li>
+              <li><a href="#propostas" className="hover:text-orange-400 transition-colors">Propostas Interativas</a></li>
+              <li><a href="#planos" className="hover:text-orange-400 transition-colors">Planos e Preços</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-white font-bold mb-6 tracking-wide">Plataforma</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Fazer Login</a></li>
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Criar Conta Grátis</a></li>
+              <li><a href={loginUrl} className="hover:text-orange-400 transition-colors">Fazer Login</a></li>
+              <li><a href={signupUrl} className="hover:text-orange-400 transition-colors">Criar Conta Grátis</a></li>
               <li><a href="#" className="hover:text-orange-400 transition-colors">Central de Ajuda</a></li>
               <li><a href="#" className="hover:text-orange-400 transition-colors">Tutoriais em Vídeo</a></li>
             </ul>
