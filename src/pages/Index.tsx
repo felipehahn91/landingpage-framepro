@@ -353,12 +353,12 @@ const Index = () => {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch py-4">
             {/* Starter Plan */}
-            <FadeIn delay={0.1} direction="up">
-              <div className="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-shadow duration-300">
+            <FadeIn delay={0.1} direction="up" className="h-full">
+              <div className="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                 <h3 className="text-xl font-extrabold mb-2 text-slate-900">STARTER</h3>
-                <p className="text-slate-500 text-sm mb-8 h-10 font-medium">O essencial para organizar suas vendas e crescer.</p>
+                <p className="text-slate-500 text-sm mb-8 font-medium min-h-[40px]">O essencial para organizar suas vendas e crescer.</p>
                 <div className="mb-8 flex items-baseline gap-1">
                   <span className="text-sm font-bold text-slate-400">R$</span>
                   <span className="text-5xl font-extrabold text-slate-900 tracking-tight">97</span>
@@ -366,31 +366,31 @@ const Index = () => {
                 </div>
                 
                 <ul className="space-y-4 mb-10 text-sm font-medium text-slate-700">
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0" /> 14 dias de teste GRÁTIS</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0" /> Gestão Ilimitada de Clientes</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0" /> Propostas e Orçamentos</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0" /> Contratos com assinatura digital</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0" /> Gestão Financeira Básica</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0" /> Suporte por e-mail</li>
-                  <li className="flex items-center gap-3 text-slate-400"><XCircle size={20} className="shrink-0" /> Integração WhatsApp</li>
-                  <li className="flex items-center gap-3 text-slate-400"><XCircle size={20} className="shrink-0" /> Sincronização com Google</li>
-                  <li className="flex items-center gap-3 text-slate-400"><XCircle size={20} className="shrink-0" /> Emissão de Boletos e Pix</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0 mt-0.5" /> <span>14 dias de teste GRÁTIS</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0 mt-0.5" /> <span>Gestão Ilimitada de Clientes</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0 mt-0.5" /> <span>Propostas e Orçamentos</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0 mt-0.5" /> <span>Contratos com assinatura digital</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0 mt-0.5" /> <span>Gestão Financeira Básica</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 shrink-0 mt-0.5" /> <span>Suporte por e-mail</span></li>
+                  <li className="flex items-start gap-3 text-slate-400"><XCircle size={20} className="shrink-0 mt-0.5" /> <span>Integração WhatsApp</span></li>
+                  <li className="flex items-start gap-3 text-slate-400"><XCircle size={20} className="shrink-0 mt-0.5" /> <span>Sincronização com Google</span></li>
+                  <li className="flex items-start gap-3 text-slate-400"><XCircle size={20} className="shrink-0 mt-0.5" /> <span>Emissão de Boletos e Pix</span></li>
                 </ul>
                 
-                <button className="w-full bg-slate-100 text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-200 transition-colors">
+                <button className="w-full bg-slate-100 text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-200 transition-colors mt-auto">
                   ASSINAR STARTER
                 </button>
               </div>
             </FadeIn>
 
             {/* Plus Plan (Highlighted) */}
-            <FadeIn delay={0.2} direction="up" className="relative z-10">
-              <div className="bg-white rounded-[2rem] p-8 border-2 border-orange-500 shadow-2xl shadow-orange-500/10 relative transform md:-translate-y-4">
+            <FadeIn delay={0.2} direction="up" className="h-full relative z-10">
+              <div className="bg-white rounded-[2rem] p-8 border-2 border-orange-500 shadow-2xl shadow-orange-500/10 relative transform md:scale-105 flex flex-col h-full">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-6 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-md">
                   Mais Escolhido
                 </div>
                 <h3 className="text-xl font-extrabold mb-2 text-orange-500 flex items-center gap-2">PLUS <Sparkles size={18} className="text-orange-400" /></h3>
-                <p className="text-slate-500 text-sm mb-8 h-10 font-medium">Tudo do Starter + Automação total de comunicação e pagamentos.</p>
+                <p className="text-slate-500 text-sm mb-8 font-medium min-h-[40px]">Tudo do Starter + Automação total de comunicação e pagamentos.</p>
                 <div className="mb-8 flex items-baseline gap-1">
                   <span className="text-sm font-bold text-slate-400">R$</span>
                   <span className="text-6xl font-extrabold text-slate-900 tracking-tight">147</span>
@@ -398,30 +398,30 @@ const Index = () => {
                 </div>
                 
                 <ul className="space-y-4 mb-10 text-sm font-semibold text-slate-800">
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0" /> Tudo que está no plano Starter</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0" /> Integração WhatsApp (API)</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0" /> Sincronização Google Calendar</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0" /> Emissão de Boletos e Pix</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0" /> Fluxo de Cadência Automático</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0" /> Mapa de Calor nos Orçamentos</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0" /> Suporte prioritário via WhatsApp</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Tudo que está no plano Starter</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Integração WhatsApp (API)</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Sincronização Google Calendar</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Emissão de Boletos e Pix</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Fluxo de Cadência Automático</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Mapa de Calor nos Orçamentos</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 shrink-0 mt-0.5" /> <span>Suporte prioritário via WhatsApp</span></li>
                 </ul>
                 
-                <button className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0">
+                <button className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 mt-auto">
                   TESTAR PLUS GRÁTIS
                 </button>
               </div>
             </FadeIn>
 
             {/* Founder Plan */}
-            <FadeIn delay={0.3} direction="up">
-              <div className="bg-slate-950 text-white rounded-[2rem] p-8 border border-slate-800 shadow-xl relative overflow-hidden group">
+            <FadeIn delay={0.3} direction="up" className="h-full">
+              <div className="bg-slate-950 text-white rounded-[2rem] p-8 border border-slate-800 shadow-xl relative overflow-hidden group flex flex-col h-full">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-bl-full blur-2xl group-hover:bg-orange-500/20 transition-colors"></div>
                 <div className="absolute top-6 right-6 bg-slate-800/80 backdrop-blur-sm text-slate-300 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase border border-slate-700">
                   VIP ANUAL
                 </div>
                 <h3 className="text-xl font-extrabold mb-2 text-white">FOUNDER</h3>
-                <p className="text-slate-400 text-sm mb-8 h-10 font-medium">Desconto agressivo e benefícios vitalícios para os primeiros membros.</p>
+                <p className="text-slate-400 text-sm mb-8 font-medium min-h-[40px]">Desconto agressivo e benefícios vitalícios para os primeiros membros.</p>
                 <div className="mb-8">
                   <div className="flex items-baseline gap-1">
                     <span className="text-sm font-bold text-slate-500">R$</span>
@@ -432,15 +432,15 @@ const Index = () => {
                 </div>
                 
                 <ul className="space-y-4 mb-10 text-sm font-medium text-slate-300">
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0" /> Tudo que está no plano Plus</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0" /> Mais de 50% de desconto no ano</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0" /> Desconto vitalício garantido</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0" /> Selo "Founder" no seu perfil</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0" /> Grupo exclusivo de networking</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0" /> Treinamento de onboarding VIP</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0 mt-0.5" /> <span>Tudo que está no plano Plus</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0 mt-0.5" /> <span>Mais de 50% de desconto no ano</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0 mt-0.5" /> <span>Desconto vitalício garantido</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0 mt-0.5" /> <span>Selo "Founder" no seu perfil</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0 mt-0.5" /> <span>Grupo exclusivo de networking</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-400 shrink-0 mt-0.5" /> <span>Treinamento de onboarding VIP</span></li>
                 </ul>
                 
-                <button className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-100 transition-colors relative z-10">
+                <button className="w-full bg-white text-slate-900 py-4 rounded-xl font-bold hover:bg-slate-100 transition-colors relative z-10 mt-auto">
                   ASSINAR FOUNDER
                 </button>
               </div>
