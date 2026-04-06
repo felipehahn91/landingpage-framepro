@@ -19,33 +19,30 @@ import {
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="flex<think>**Constructing the Code**
-
-I'm now fully immersed in coding. The fundamental React and Tailwind structure are set up, including essential components: navigation, hero, and bento grid sections. I'm focusing on text and exact styling, aiming for pixel-perfect reproduction. I'll utilize Lucide React icons. I will directly translate and implement the Portuguese text.
-
-
-</think> items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-orange-500 rounded-md flex items-center justify-center">
-            <span className="text-white font-bold text-xl leading-none">F</span>
+      {/* Header / Navigation */}
+      <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-orange-500 rounded-md flex items-center justify-center">
+              <span className="text-white font-bold text-xl leading-none">F</span>
+            </div>
+            <span className="font-bold text-xl tracking-tight">FramePro</span>
           </div>
-          <span className="font-bold text-xl tracking-tight">FramePro</span>
-        </div>
-        
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-          <a href="#como-funciona" className="hover:text-orange-500 transition-colors">Como Funciona</a>
-          <a href="#propostas" className="hover:text-orange-500 transition-colors">Propostas</a>
-          <a href="#planos" className="hover:text-orange-500 transition-colors">Planos</a>
-        </div>
+          
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href="#como-funciona" className="hover:text-orange-500 transition-colors">Como Funciona</a>
+            <a href="#propostas" className="hover:text-orange-500 transition-colors">Propostas</a>
+            <a href="#planos" className="hover:text-orange-500 transition-colors">Planos</a>
+          </div>
 
-        <div className="flex items-center gap-4">
-          <a href="#" className="text-sm font-medium text-slate-600 hover:text-slate-900 hidden sm:block">Entrar</a>
-          <button className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors">
-            Teste Grátis
-          </button>
-        </div>
-      </nav>
+          <div className="flex items-center gap-4">
+            <a href="#" className="text-sm font-medium text-slate-600 hover:text-slate-900 hidden sm:block">Entrar</a>
+            <button className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors">
+              Teste Grátis
+            </button>
+          </div>
+        </nav>
+      </header>
 
       {/* Hero Section */}
       <section className="pt-20 pb-32 px-4 text-center max-w-5xl mx-auto">
