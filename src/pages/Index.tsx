@@ -33,20 +33,6 @@ const FadeIn = ({ children, delay = 0, direction = 'up', className = "" }: { chi
   };
 
   return (
-<think>**Eliminating the Artifact**
-
-I've zeroed in on the erroneous inclusion of the `<think>` tag within the JSX of `src/pages/Index.tsx`, specifically around line 64. My next action is a direct removal of this unwanted block. I'm focusing on a clean and concise correction, ensuring no residual artifacts remain after the fix is implemented.
-
-
-</think>    <motion.div
-      initial={{ opacity: 0, ...directions[direction] }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.7, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
-      className={className}
-    >
-      {children}
-    </motion.div>
   );
 };
 
