@@ -114,7 +114,7 @@ const Index = () => {
         </FadeIn>
         
         <FadeIn delay={0.4}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
             <button className="w-full sm:w-auto bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition-all flex items-center justify-center gap-2 shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-1 active:translate-y-0">
               COMEÇAR 14 DIAS GRÁTIS <ArrowRight size={20} />
             </button>
@@ -122,9 +122,6 @@ const Index = () => {
               Ver recursos
             </button>
           </div>
-          <p className="text-xs text-slate-400 font-bold uppercase tracking-widest mb-20 flex items-center justify-center gap-2">
-            <Sparkles size={14} className="text-orange-400" /> SEM NECESSIDADE DE CARTÃO DE CRÉDITO
-          </p>
         </FadeIn>
 
         {/* Hero Image Mockup */}
