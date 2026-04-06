@@ -18,7 +18,7 @@ RUN npm run build
 # Estágio 2: Servidor Nginx para produção
 FROM nginx:alpine
 
-# Copia a configuração customizada do Nginx (para o React Router funcionar)
+# Copia a configuração customizada do Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copia os arquivos buildados do estágio anterior para o diretório do Nginx
