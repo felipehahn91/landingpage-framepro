@@ -1,11 +1,6 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
-import { Link }<think>**Fixing the Leaked Tags**
-
-I've identified the issue; some internal tags polluted the code. My immediate task is fixing `PrivacyPolicy.tsx` by eliminating the erroneous `<think>` block. I'll thoroughly rewrite the file to guarantee that the content is both accurate and free of any unexpected artifacts. I'm focusing on cleaning up the existing code to ensure a solid foundation.
-
-
-</think> from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   return (
