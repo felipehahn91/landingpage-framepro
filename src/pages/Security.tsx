@@ -183,19 +183,19 @@ const Security = () => {
             <FadeIn delay={0.1}>
               <div className="bg-[#1F2937] border border-slate-700/50 rounded-2xl p-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                  <Database className="text-blue-400" size={20} /> 1. Isolamento de Dados (Multi-tenant)
+                  <Database className="text-blue-400" size={20} /> 1. Isolamento de Dados (Arquitetura Multi-tenant)
                 </h3>
                 <p className="mb-6 text-sm leading-relaxed">
-                  O Frame Pro utiliza o <strong className="text-white">PostgreSQL</strong> hospedado na infraestrutura do <strong className="text-white">Supabase</strong> (AWS). A separação de dados entre diferentes estúdios (tenants) é garantida nativamente pelo banco de dados através de <strong className="text-white">Row Level Security (RLS)</strong>.
+                  Nossa infraestrutura garante a separação estrita de informações entre diferentes estúdios no nível mais profundo do sistema.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span>Políticas RLS estritas garantem que operações de SELECT, INSERT, UPDATE e DELETE só sejam executadas se o <code className="bg-slate-800 px-1.5 py-0.5 rounded text-blue-300">auth.uid()</code> corresponder ao proprietário do registro.</span>
+                    <span><strong className="text-white">Barreiras Intransponíveis:</strong> Regras de segurança nativas do banco de dados validam cada requisição. É estruturalmente impossível que as credenciais de um estúdio acessem, leiam ou modifiquem informações de terceiros.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span>Vazamento de dados por falha na camada de aplicação (Frontend/Backend) é mitigado, pois o próprio motor do banco de dados rejeita queries não autorizadas.</span>
+                    <span><strong className="text-white">Proteção na Raiz:</strong> As permissões de acesso não dependem da camada visual da aplicação. Elas são blindadas diretamente no motor do banco de dados, mitigando riscos de vazamentos por falhas de interface.</span>
                   </li>
                 </ul>
               </div>
@@ -205,19 +205,19 @@ const Security = () => {
             <FadeIn delay={0.2}>
               <div className="bg-[#1F2937] border border-slate-700/50 rounded-2xl p-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                  <Key className="text-orange-400" size={20} /> 2. Autenticação e Sessões
+                  <Key className="text-orange-400" size={20} /> 2. Autenticação e Gestão de Acessos
                 </h3>
                 <p className="mb-6 text-sm leading-relaxed">
-                  O gerenciamento de identidade é provido pelo <strong className="text-white">GoTrue</strong> (Supabase Auth).
+                  O gerenciamento de identidades utiliza os padrões de segurança exigidos por instituições financeiras.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span>Senhas nunca são armazenadas em texto limpo. Utiliza-se algoritmos de hash robustos (bcrypt/Argon2) com salt exclusivo por usuário.</span>
+                    <span><strong className="text-white">Senhas Blindadas:</strong> Nenhuma senha é armazenada em texto limpo. Utilizamos algoritmos avançados de hash criptográfico com chaves exclusivas (salting), tornando-as indecifráveis até mesmo para nossos engenheiros.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span>Sessões são gerenciadas via <strong className="text-white">JWT (JSON Web Tokens)</strong> assinados criptograficamente, com tempo de expiração curto e rotação automática de refresh tokens.</span>
+                    <span><strong className="text-white">Sessões Criptografadas:</strong> A navegação na plataforma ocorre através de tokens de sessão assinados digitalmente. Eles possuem tempo de expiração curto e validação contínua, prevenindo sequestro de contas.</span>
                   </li>
                 </ul>
               </div>
@@ -227,23 +227,23 @@ const Security = () => {
             <FadeIn delay={0.3}>
               <div className="bg-[#1F2937] border border-slate-700/50 rounded-2xl p-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                  <Globe className="text-purple-400" size={20} /> 3. Exposição Segura de Links Públicos
+                  <Globe className="text-purple-400" size={20} /> 3. Compartilhamento Seguro com Clientes Finais
                 </h3>
                 <p className="mb-6 text-sm leading-relaxed">
-                  Documentos compartilhados com clientes finais (Orçamentos, Contratos e Formulários) não expõem as tabelas do banco de dados.
+                  Os orçamentos e contratos que você envia aos clientes não abrem portas para o seu banco de dados principal.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span>O acesso público é feito exclusivamente através de <strong className="text-white">RPCs (Remote Procedure Calls)</strong> com a flag <code className="bg-slate-800 px-1.5 py-0.5 rounded text-blue-300">SECURITY DEFINER</code>.</span>
+                    <span><strong className="text-white">Acesso Controlado:</strong> Links públicos funcionam através de interfaces restritas no servidor. O visitante visualiza apenas o documento autorizado, com bloqueio total de navegação para outras áreas do sistema.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span>A busca exige um token UUID v4 exato (128-bit). Tentativas de enumeração ou força bruta são matematicamente inviáveis.</span>
+                    <span><strong className="text-white">Proteção contra Varredura (Força Bruta):</strong> Os links são gerados com identificadores únicos universais de alta entropia. É matematicamente impossível que um robô automatizado consiga adivinhar URLs para acessar documentos de terceiros.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span>As políticas RLS das tabelas principais permanecem fechadas para acesso anônimo, prevenindo extração de dados em massa.</span>
+                    <span><strong className="text-white">Privilégios Mínimos:</strong> O acesso via link externo opera em um ambiente isolado apenas para leitura, eliminando vetores de injeção de código ou extração de dados em massa.</span>
                   </li>
                 </ul>
               </div>
@@ -255,18 +255,21 @@ const Security = () => {
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
                   <Server className="text-green-400" size={20} /> 4. Infraestrutura e Conformidade
                 </h3>
+                <p className="mb-6 text-sm leading-relaxed">
+                  A base tecnológica da nossa plataforma é hospedada em servidores globais redundantes e auditados.
+                </p>
                 <ul className="space-y-4 text-sm">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span><strong className="text-white">Criptografia em Trânsito:</strong> Todo o tráfego utiliza TLS 1.2/1.3 (HTTPS).</span>
+                    <span><strong className="text-white">Criptografia em Trânsito:</strong> Toda a comunicação entre o seu navegador e nossos servidores ocorre sob protocolos de segurança de ponta a ponta (HTTPS/TLS moderno).</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span><strong className="text-white">Criptografia em Repouso:</strong> Os dados armazenados nos servidores (AWS) são criptografados em repouso utilizando o padrão AES-256.</span>
+                    <span><strong className="text-white">Criptografia em Repouso:</strong> No servidor físico, todos os dados são armazenados utilizando criptografia de nível militar (padrão AES-256).</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-green-400 shrink-0 mt-0.5" />
-                    <span><strong className="text-white">Conformidade:</strong> A infraestrutura base (Supabase) é auditada e possui certificação SOC2 Type II e conformidade com a HIPAA.</span>
+                    <span><strong className="text-white">Conformidade Internacional:</strong> Nossa infraestrutura base passa por auditorias rigorosas e atende a certificações de segurança globais, como SOC2 Type II, alinhando-se a padrões rígidos de privacidade.</span>
                   </li>
                 </ul>
               </div>
