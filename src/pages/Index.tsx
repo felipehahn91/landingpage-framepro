@@ -16,17 +16,18 @@ import {
   Linkedin
 } from 'lucide-react';
 
+// Importando as imagens
+import logoImg from '../assets/logo.png';
+import heroMockupImg from '../assets/hero-mockup.png';
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
       {/* Header / Navigation */}
       <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-100">
         <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-orange-500 rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-xl leading-none">F</span>
-            </div>
-            <span className="font-bold text-xl tracking-tight">FramePro</span>
+          <div className="flex items-center">
+            <img src={logoImg} alt="FramePro Logo" className="h-8 w-auto" />
           </div>
           
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
@@ -74,12 +75,12 @@ const Index = () => {
         </p>
 
         {/* Hero Image Mockup */}
-        <div className="relative mx-auto max-w-4xl">
+        <div className="relative mx-auto max-w-5xl">
           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 h-full w-full bottom-0"></div>
           <img 
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
+            src={heroMockupImg} 
             alt="Dashboard FramePro" 
-            className="rounded-2xl shadow-2xl border border-slate-200 object-cover h-[400px] md:h-[600px] w-full"
+            className="rounded-2xl shadow-2xl border border-slate-200 object-cover w-full"
           />
         </div>
       </section>
@@ -359,11 +360,8 @@ const Index = () => {
       <footer className="bg-slate-950 text-slate-400 py-16 px-6 border-t border-slate-900">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-slate-800 rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-xl leading-none">F</span>
-              </div>
-              <span className="font-bold text-xl tracking-tight text-white">FramePro</span>
+            <div className="flex items-center mb-6">
+              <img src={logoImg} alt="FramePro Logo" className="h-8 w-auto brightness-0 invert opacity-80" />
             </div>
             <p className="text-sm mb-6 leading-relaxed">
               O CRM definitivo para fotógrafos e filmmakers. Organize sua agenda, crie propostas irresistíveis e feche contratos digitalmente sem dor de cabeça.
