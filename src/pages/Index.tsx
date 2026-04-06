@@ -19,6 +19,7 @@ import {
   Linkedin,
   Sparkles
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Importando as imagens
 import logoImg from '../assets/logo.png';
@@ -525,8 +526,8 @@ const Index = () => {
           <div>
             <h4 className="text-white font-bold mb-6 tracking-wide">Legal</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Termos de Uso</a></li>
-              <li><a href="#" className="hover:text-orange-400 transition-colors">Política de Privacidade</a></li>
+              <li><Link to="/termos" className="hover:text-orange-400 transition-colors">Termos de Uso</Link></li>
+              <li><Link to="/privacidade" className="hover:text-orange-400 transition-colors">Política de Privacidade</Link></li>
               <li><a href="#" className="hover:text-orange-400 transition-colors">Contato</a></li>
             </ul>
           </div>
